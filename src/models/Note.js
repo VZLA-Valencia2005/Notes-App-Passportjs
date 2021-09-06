@@ -7,4 +7,4 @@ const Note = new NoteSchema({
     user: String
 });
 
-module.exports = model('Note', Note);
+module.exports = mongoose.model('Note', Note);
