@@ -8,7 +8,7 @@ const path = require('path');
 // Initializations
 const app = express();
 const indexRoutes = require('./routes/index');
-
+const notesRoutes = require('./routes/Notes');
 // Middlewares
 app.use(cors());
 app.use(morgan('dev'));
@@ -28,9 +28,8 @@ app.engine('.hbs', exphbs({
 app.set('view engine', '.hbs');
 
 // Routes
-
 app.use(indexRoutes);
-
+app.use('/notes', notesRoutes);
 
 // export module
 
